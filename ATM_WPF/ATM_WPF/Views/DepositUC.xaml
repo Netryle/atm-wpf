@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="ATM_WPF.Views.DepositUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ATM_WPF.Views"
+             mc:Ignorable="d" 
+             Background="#FFE4FFBF"
+             d:DesignHeight="450" d:DesignWidth="600">
+    <Grid>
+        <Label Content="Deposit money"  Margin="0,10,0,0" Style="{StaticResource HeaderStyle}"/>
+        <Label Content="{Binding TotalSum, Mode=OneWay}" FontSize="18" Margin="299,165,33,129" FontWeight="Medium"/>
+        <Grid HorizontalAlignment="Left" Height="242" VerticalAlignment="Top" Width="124" Margin="157,79,0,0">
+
+            <Label Content="10 RUB" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="50 RUB" HorizontalAlignment="Left" Margin="0,30,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="100 RUB" HorizontalAlignment="Left" Margin="0,60,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="200 RUB" HorizontalAlignment="Left" Margin="0,90,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="500 RUB" HorizontalAlignment="Left" Margin="0,120,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="1000 RUB" HorizontalAlignment="Left" Margin="0,150,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="2000 RUB" HorizontalAlignment="Left" Margin="0,180,0,0" VerticalAlignment="Top" FontSize="16"/>
+            <Label Content="5000 RUB" HorizontalAlignment="Left" Margin="0,210,0,0" VerticalAlignment="Top" FontSize="16"/>
+
+            <TextBox Text="{Binding Nominal10}"  TextAlignment="Center" Height="20" Width="40" Margin="84,6,0,215" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal50}" TextAlignment="Center" Height="20" Width="40" Margin="84,36,0,185" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal100}" TextAlignment="Center" Height="20" Width="40" Margin="84,66,0,155" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal200}" TextAlignment="Center" Height="20" Width="40" Margin="84,96,0,125" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal500}" TextAlignment="Center" Height="20" Width="40" Margin="84,126,0,95" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal1000}" TextAlignment="Center" Height="20" Width="40" Margin="84,156,0,65" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal2000}" TextAlignment="Center" Height="20" Width="40" Margin="84,186,0,35" PreviewTextInput="TextBox_PreviewTextInput"/>
+            <TextBox Text="{Binding Nominal5000}" TextAlignment="Center" Height="20" Width="40" Margin="84,216,0,5" PreviewTextInput="TextBox_PreviewTextInput"/>
+
+        </Grid>
+        <Button Content="Deposit" Command="{Binding DepositCommand}" Margin="322,343,0,0" Style="{StaticResource buttonStyle}"/>
+        <Button Content="Back" Command="{Binding BackCommand}" Margin="131,343,0,0" Style="{StaticResource buttonStyle}"/>
+    </Grid>
+</UserControl>
