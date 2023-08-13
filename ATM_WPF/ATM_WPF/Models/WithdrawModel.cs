@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace ATM_WPF.Models
 {
-    internal class WithdrawModel
+    public class WithdrawModel
     {
         private SharedDataModel _sharedDataModel;
         public WithdrawModel(SharedDataModel sharedDataModel)

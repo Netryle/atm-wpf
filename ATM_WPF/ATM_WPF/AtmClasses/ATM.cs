@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Automation;
 
 namespace ATM_WPF.AtmClasses
 {
@@ -28,7 +26,7 @@ namespace ATM_WPF.AtmClasses
             {
                 _banknotes.Add(new Banknote(
                 nominal,
-                random.Next(250, 500),
+                random.Next(250, 450),
                 maxAmountOfBanknotes)
                 );
             }

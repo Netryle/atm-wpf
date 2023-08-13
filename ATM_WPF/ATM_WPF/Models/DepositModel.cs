@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Transactions;
 
 namespace ATM_WPF.Models
 {
-    internal class DepositModel
+    public class DepositModel
     {
         private SharedDataModel _sharedDataModel;
         public DepositModel(SharedDataModel sharedDataModel)
