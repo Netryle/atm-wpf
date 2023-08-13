@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ATM_WPF.AtmClasses
 {
-    internal class Banknote
+    public class Banknote
     {
         public int Nominal { get; private set; }
         public int Count { get; set; }

@@ -7,7 +7,7 @@ using System.Windows.Automation;
 
 namespace ATM_WPF.AtmClasses
 {
-    internal class ATM
+    public class ATM
     {
         private List<Banknote> _banknotes;
         public int Balance => _banknotes
@@ -33,11 +33,7 @@ namespace ATM_WPF.AtmClasses
                 );
             }
         }
-        private Banknote GetBanknoteByNominal(int nominal)
-        {
-            return _banknotes.FirstOrDefault(b => b.Nominal == nominal);
-        }
-
+        
         private Dictionary<int, int> GetDictionaryOfWithdrawableBanknotes(
             IEnumerable<Banknote> banknotes, 
             int amount
@@ -76,6 +72,11 @@ namespace ATM_WPF.AtmClasses
 
                 return null;
             }
+        }
+
+        public Banknote GetBanknoteByNominal(int nominal)
+        {
+            return _banknotes.FirstOrDefault(b => b.Nominal == nominal);
         }
 
         public bool AddBanknotes(int nominal, int count)
